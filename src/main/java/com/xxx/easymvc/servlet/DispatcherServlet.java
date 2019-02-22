@@ -28,7 +28,7 @@ public class DispatcherServlet extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		//扫描哪些包中的使用Controller注解标注的类
-		List<Class<?>> classList = ClassUtil.getClassListByAnnotation("cn.wolfcode.hello", Controller.class);
+		List<Class<?>> classList = ClassUtil.getClassListByAnnotation("com.xxx.easymvc", Controller.class);
 		for (Class<?> clazz : classList) {
 			Method[] methods = clazz.getDeclaredMethods();
 			if (methods != null && methods.length > 0) {
